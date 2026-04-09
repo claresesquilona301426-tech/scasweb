@@ -1,0 +1,20 @@
+This directory contains static assets for the SCAS Admissions System.
+
+Required assets:
+- logo.svg (SCAS logo)
+- hero-bg.jpg (Hero background image)
+- program-stem.jpg (STEM program image)
+- program-bsit.jpg (BSIT program image)
+- program-bsba.jpg (BSBA program image)
+- program-baed.jpg (BAED program image)
+- program-mba.jpg (MBA program image)
+- program-abm.jpg (ABM program image)
+- pattern.svg (Background pattern)
+- favicon.ico (Favicon)
+
+Images should be optimized for web:
+- JPEG format for photographs (quality: 80-90%)
+- SVG format for logos and icons
+- WebP format for modern browsers (optional)
+- Maximum width: 1920px for hero images
+- File size: Under 500KB per image
