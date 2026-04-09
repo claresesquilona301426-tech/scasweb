@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SCAS</title>
+    <meta name="description" content="SCAS Admin Dashboard for analytics and management">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/admin.css">
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="assets/logo.svg" alt="SCAS Logo" class="logo">
+                <span class="brand-text">SCAS Admin</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="admissions.html" class="nav-link">Admissions</a>
+                <a href="admin.html" class="nav-link active">Dashboard</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link dropdown-toggle">Admin</button>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Applications</a>
+                        <a href="#" class="dropdown-item">Inquiries</a>
+                        <a href="#" class="dropdown-item">Reports</a>
+                        <a href="#" class="dropdown-item">Settings</a>
+                    </div>
+                </div>
+                <button class="btn btn-outline btn-logout">Logout</button>
+            </div>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Admin Dashboard -->
+    <section class="admin-dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <div class="header-content">
+                    <h1 class="page-title">Admin Dashboard</h1>
+                    <p class="page-subtitle">Welcome back! Here's your overview for today</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 4V20M4 12H20"/>
+                        </svg>
+                        New Report
+                    </button>
+                    <div class="date-filter">
+                        <select class="form-select">
+                            <option value="today">Today</option>
+                            <option value="week">This Week</option>
+                            <option value="month">This Month</option>
+                            <option value="year">This Year</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Stats Row -->
+            <div class="stats-grid">
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-icon stat-blue">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 21V5C16 3.89543 15.1046 3 14 3H10C8.89543 3 8 3.89543 8 5V21"/>
+                            <path d="M4 21H20"/>
+                            <path d="M8 7H16"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="1247">0</h3>
+                        <p class="stat-label">Total Applicants</p>
+                        <div class="stat-change positive">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7 14L12 9L17 14"/>
+                            </svg>
+                            <span>+12%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-icon stat-green">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="89">0</h3>
+                        <p class="stat-label">New Inquiries</p>
+                        <div class="stat-change positive">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7 14L12 9L17 14"/>
+                            </svg>
+                            <span>+8%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-icon stat-gold">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z"/>
+                            <path d="M2 17L12 22L22 17"/>
+                            <path d="M2 12L12 17L22 12"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-label">Top Program</h3>
+                        <p class="stat-value">BS Information Technology</p>
+                        <div class="stat-change positive">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7 14L12 9L17 14"/>
+                            </svg>
+                            <span>+25% applications</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-icon stat-purple">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 8V16C16 17.1046 15.1046 18 14 18H10C8.89543 18 8 17.1046 8 16V8"/>
+                            <path d="M12 3V8"/>
+                            <path d="M8 8L10 6"/>
+                            <path d="M16 8L14 6"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="342">0</h3>
+                        <p class="stat-label">Pending Reviews</p>
+                        <div class="stat-change negative">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17 10L12 15L7 10"/>
+                            </svg>
+                            <span>-5%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-section">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3>Applications by Month</h3>
+                        <div class="chart-actions">
+                            <button class="btn btn-sm btn-outline">Export</button>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="applicationsChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3>Program Popularity</h3>
+                        <div class="chart-actions">
+                            <button class="btn btn-sm btn-outline">Export</button>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="programsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="activity-section">
+                <div class="section-header">
+                    <h3>Recent Activity</h3>
+                    <button class="btn btn-sm btn-outline">View All</button>
+                </div>
+                
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon activity-blue">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"/>
+                                <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"/>
+                            </svg>
+                        </div>
+                        <div class="activity-content">
+                            <p class="activity-title">New application received</p>
+                            <p class="activity-description">Juan Dela Cruz - BS Information Technology</p>
+                            <span class="activity-time">2 minutes ago</span>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon activity-green">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z"/>
+                            </svg>
+                        </div>
+                        <div class="activity-content">
+                            <p class="activity-title">New inquiry received</p>
+                            <p class="activity-description">Maria Santos asking about tuition fees</p>
+                            <span class="activity-time">15 minutes ago</span>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon activity-purple">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 11L12 14L22 4"/>
+                                <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16"/>
+                            </svg>
+                        </div>
+                        <div class="activity-content">
+                            <p class="activity-title">Application approved</p>
+                            <p class="activity-description">Jose Reyes - Senior High School STEM</p>
+                            <span class="activity-time">1 hour ago</span>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon activity-orange">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z"/>
+                                <path d="M2 17L12 22L22 17"/>
+                                <path d="M2 12L12 17L22 12"/>
+                            </svg>
+                        </div>
+                        <div class="activity-content">
+                            <p class="activity-title">Document uploaded</p>
+                            <p class="activity-description">Ana Garcia uploaded birth certificate</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions-section">
+                <h3>Quick Actions</h3>
+                <div class="actions-grid">
+                    <button class="action-card">
+                        <div class="action-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z"/>
+                                <path d="M2 17L12 22L22 17"/>
+                                <path d="M2 12L12 17L22 12"/>
+                            </svg>
+                        </div>
+                        <h4>Review Applications</h4>
+                        <p>342 pending reviews</p>
+                    </button>
+
+                    <button class="action-card">
+                        <div class="action-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z"/>
+                            </svg>
+                        </div>
+                        <h4>Respond to Inquiries</h4>
+                        <p>89 unanswered</p>
+                    </button>
+
+                    <button class="action-card">
+                        <div class="action-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z"/>
+                                <path d="M14 2V8H20"/>
+                                <path d="M16 13H8"/>
+                                <path d="M16 17H8"/>
+                                <path d="M10 9H8"/>
+                            </svg>
+                        </div>
+                        <h4>Generate Reports</h4>
+                        <p>Monthly summary</p>
+                    </button>
+
+                    <button class="action-card">
+                        <div class="action-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z"/>
+                                <path d="M2 17L12 22L22 17"/>
+                                <path d="M2 12L12 17L22 12"/>
+                            </svg>
+                        </div>
+                        <h4>Manage Programs</h4>
+                        <p>25 active programs</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/number-counters.js"></script>
+    <script src="js/admin-charts.js"></script>
+    <script src="js/enhanced-charts.js"></script>
+</body>
+</html>
